@@ -3,7 +3,7 @@ import logger from "morgan";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
-import { localsMiddleware } from "./middlewares";
+import { localsMiddleware, toBypassCsp } from "./middlewares";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 import globalRouter from "./routers/globalRouter";
@@ -18,6 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(logger("dev"));
 app.use(localsMiddleware);
+app.use(toBypassCsp);
 
 app.use(routes.home, globalRouter);
 app.use(routes.users, userRouter);
