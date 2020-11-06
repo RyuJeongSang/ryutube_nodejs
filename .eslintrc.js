@@ -12,5 +12,8 @@ module.exports = {
     quotes: "off",
     "no-else-return": "off",
     "no-console": "off",
+    "implicit-arrow-linebreak": "off",
+    "comma-dangle": "off",
+    "object-curly-newline": "off",
   },
 };

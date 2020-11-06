@@ -9,8 +9,15 @@
     margin-bottom: 30px;
     padding-bottom: 10px;
     border-bottom: 2px solid rgba($color: #000000, $alpha: 0.2);
-    input:not([type="file"]),
     .fileUpload {
+      height: 50px;
+      margin-bottom: 20px;
+      label {
+        font-weight: 300;
+        margin-right: 10px;
+      }
+    }
+    input:not([type="file"]) {
       display: block;
       width: 100%;
       padding: 7px 10px;
@@ -38,10 +45,7 @@
     max-width: 320px;
     width: 100%;
   }
-  .fileUpload {
-    label {
-      font-weight: 300;
-      margin-right: 10px;
-    }
+  a:visited {
+    color: $grey;
   }
 }
