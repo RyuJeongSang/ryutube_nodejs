@@ -15,5 +15,6 @@ module.exports = {
     "implicit-arrow-linebreak": "off",
     "comma-dangle": "off",
     "object-curly-newline": "off",
+    "no-use-before-define": "off",
   },
 };
