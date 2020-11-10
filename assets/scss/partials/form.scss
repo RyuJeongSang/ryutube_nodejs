@@ -1,0 +1,52 @@
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  form {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba($color: #000000, $alpha: 0.2);
+    .fileUpload {
+      height: 50px;
+      margin-bottom: 20px;
+      label {
+        font-weight: 300;
+        margin-right: 10px;
+      }
+    }
+    input:not([type="file"]) {
+      display: block;
+      width: 100%;
+      padding: 7px 10px;
+      font-size: 14px;
+      font-weight: 600;
+      height: 38px;
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+      &:last-child {
+        background-color: #e3dede;
+        border: none;
+      }
+      border: 1px solid rgba($color: #000000, $alpha: 0.3);
+      &::placeholder {
+        color: rgba($color: #000000, $alpha: 0.3);
+      }
+    }
+    textarea {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      margin-bottom: 25px;
+    }
+  }
+  a {
+    max-width: 320px;
+    width: 100%;
+  }
+  a:visited {
+    color: $grey;
+  }
+}

@@ -1,0 +1,75 @@
+.header {
+  background-color: $red;
+  margin-bottom: 50px;
+  .header__wrapper {
+    padding: 13px;
+    width: 100%;
+    margin: 0px auto;
+    max-width: 1200px;
+    min-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    .header__column {
+      position: relative;
+      a:visited {
+        color: $grey;
+      }
+      i {
+        color: $grey;
+        font-size: 37px;
+      }
+      &:nth-child(2) {
+        width: 100%;
+        justify-self: center;
+      }
+      &:last-child {
+        top: 23px;
+        right: 13px;
+        position: absolute;
+        justify-self: end;
+      }
+      ul {
+        display: flex;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $grey;
+        li:not(:last-child) {
+          margin-right: 15px;
+        }
+        a:visited {
+          color: $grey;
+        }
+      }
+      @media screen and (max-width: 750px) {
+        form {
+          display: none;
+        }
+      }
+      form {
+        width: 100%;
+        position: relative;
+        input {
+          padding: 7px 10px;
+          width: 100%;
+          font-size: 14px;
+          color: $black;
+          font-weight: 600;
+          max-width: none;
+          height: 35px;
+          border: 1px solid rgba($color: #000000, $alpha: 0.3);
+          &::placeholder {
+            color: rgba($color: #000000, $alpha: 0.7);
+          }
+        }
+        i {
+          font-size: 21px;
+          color: $black;
+          position: absolute;
+          top: 7px;
+          right: 5px;
+        }
+      }
+    }
+  }
+}
