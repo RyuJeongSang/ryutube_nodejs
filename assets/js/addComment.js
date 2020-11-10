@@ -9,11 +9,16 @@ function increaseNumber() {
 }
 
 function addComment(comment) {
+  const div = document.createElement("div");
   const li = document.createElement("li");
   const span = document.createElement("span");
+  const button = document.createElement("button");
   span.innerHTML = comment;
+  button.innerHTML = "delete";
   li.appendChild(span);
-  commentList.prepend(li);
+  div.appendChild(li);
+  div.appendChild(button);
+  commentList.prepend(div);
   increaseNumber();
 }
 

@@ -33,6 +33,7 @@ export const search = async (req, res) => {
 export const getUpload = (req, res) => {
   res.render("upload", { pageTitle: "Upload" });
 };
+
 export const postUpload = async (req, res) => {
   const {
     body: { title, description },
@@ -138,11 +139,30 @@ export const postAddComment = async (req, res) => {
   } = req;
   try {
     const video = await Video.findById(id);
+    // const commentUser = await User.findById(user.id);
     const newComment = await Comment.create({
       text: comment,
       creator: user.id,
     });
     video.comments.push(newComment.id);
+    video.save();
+  } catch (error) {
+    res.status(400);
+  } finally {
+    res.end();
+  }
+};
+
+// Remove Comment
+
+export const postRemoveComment = async (req, res) => {
+  const {
+    params: { id, commentId },
+  } = req;
+  try {
+    const video = await Video.findById(id);
+    // const commentUser = await User.findById(user.id);
+    video.comments.splice(video.comments.indexOf(commentId), 1);
     video.save();
   } catch (error) {
     res.status(400);

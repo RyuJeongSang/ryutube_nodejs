@@ -52,17 +52,31 @@
       margin-bottom: 15px;
     }
     .video__comments-list {
-      li {
-        max-width: 350px;
-        white-space: normal;
-        word-break: break-all;
-        background-color: #3498db;
-        color: white;
-        padding: 15px;
-        border-radius: 20px;
-        border-bottom-left-radius: 0px;
+      div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
         &:not(:last-child) {
           margin-bottom: 15px;
+        }
+        li {
+          max-width: 350px;
+          white-space: normal;
+          word-break: break-all;
+          background-color: #3498db;
+          color: white;
+          padding: 15px;
+          margin-right: 20px;
+          border-radius: 20px;
+          border-bottom-left-radius: 0px;
+        }
+        button {
+          padding: 0;
+          width: 37px;
+          height: 37px;
+          font-size: 12px;
+          background-color: #bedbbb;
+          align-items: center;
         }
       }
     }
