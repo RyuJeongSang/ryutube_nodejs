@@ -10,7 +10,7 @@
     "copyAll": "cp -R src/static build && cp -R src/views build",
     "build": "npm run build:server && npm run build:assets && npm run copyAll",
     "prebuild": "rm -rf build",
-    "start": "node build/init.js",
+    "start": "PRODUCTION=true node build/init.js",
     "prestart": "npm run build"
   },
   "author": "RyuJeongSang",
@@ -22,6 +22,7 @@
     "autoprefixer": "^10.0.1",
     "aws-sdk": "^2.788.0",
     "axios": "^0.21.0",
+    "babel-cli": "^6.26.0",
     "babel-loader": "^8.1.0",
     "body-parser": "^1.19.0",
     "connect-mongo": "^3.2.0",
