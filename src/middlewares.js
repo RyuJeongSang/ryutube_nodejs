@@ -17,9 +17,11 @@ const multerVideo = multer({
   }),
 });
 const multerAvatar = multer({
-  s3,
-  acl: "public-read",
-  bucket: "ryutube-nodejs/avatar",
+  storage: multerS3({
+    s3,
+    acl: "public-read",
+    bucket: "ryutube-nodejs/avatar",
+  }),
 });
 
 export const uploadVideo = multerVideo.single("videoFile");
