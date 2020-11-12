@@ -1,11 +1,17 @@
 doctype html
 html(lang="ko")
     head
-        link(rel="icon" href="http://localhost:4000/uploads/avatars/2c37be509c240be4f4a631e36da1c0e7")
+        link(rel="icon" href="#")
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous")
         title #{pageTitle} | #{siteName}
         link(rel="stylesheet" href="/static/styles.css")
     body
+        if messages.error
+            span=messages.error
+        else if messages.info
+            span=messages.info
+        else if messaage.success
+            span=messaage.success
         include ../partials/header
         main
             block content
